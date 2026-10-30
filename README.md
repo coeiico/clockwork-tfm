@@ -2,11 +2,7 @@
 
 **Grokking modular addition.** Grokking (a + b) mod 113 with a one-layer transformer, then reading and causally testing the Fourier algorithm it learns.
 
-Part of the **Latent Space Project**: 18 small PyTorch repos that test one idea, that neural networks encode concepts and strategy in their latent space, and that we can read and edit those representations. Everything trains on a single consumer GPU or a laptop.
-
-| Roadmap | Phase | Depends on | Status |
-| --- | --- | --- | --- |
-| 2 of 18 | 1. Foundations | Nothing; code already exists | In progress (scaffolded) |
+**Status:** in progress.
 
 A working version already exists; this repo packages it and adds the causal tests.
 
@@ -29,7 +25,7 @@ Does a network that first memorizes later discover a real algorithm, and can we 
 
 ## Done when
 
-The definition of done every Latent Space Project repo shares:
+The general checklist:
 
 Apply this checklist with the project-specific requirements and exceptions in
 [CLAUDE.md](CLAUDE.md#project-specific-scope).
