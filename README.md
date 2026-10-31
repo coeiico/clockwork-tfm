@@ -12,7 +12,7 @@ Does a network that first memorizes later discover a real algorithm, and can we 
 
 ## Plan
 
-- **Existing code:** the owner has `grokking.py` (training plus five plots) and `predict.py` (inference, `--show` for internals, `--check` for full accuracy). Move both into the standard layout.
+- **Existing code:** `grokking.py` (training plus five plots) and `predict.py` (inference, `--show` for internals, `--check` for full accuracy) already exist outside this repo. Move both into the standard layout.
 - **Verified run:** (a + b) mod 113, 30% of pairs for training, 1-layer transformer (d_model 128, 4 heads, d_mlp 512, no norm), full-batch AdamW, lr 1e-3, weight decay 1.0. It memorized by about step 300, passed 95% test accuracy at step 21,100, and reached 100% on all 12,769 pairs. Key embedding frequencies: 1, 7, 24, 30 (53 weaker). About 32 minutes on 2 CPU cores. The default is now 35,000 steps.
 - **Design note:** only the `=` position computes attention and the MLP. This is mathematically equal to a causal model read at the last position, and about 3× cheaper.
 
@@ -38,7 +38,7 @@ Apply this checklist with the project-specific requirements and exceptions in
 
 ## Notes
 
-- **Waiting on the owner:** copy `grokking.py` and `predict.py` in, then split them into `src/clockwork_tfm/` (model, data, analysis) and the `train.py` / `predict.py` / `analyze.py` scripts.
+- **Not done yet:** copy `grokking.py` and `predict.py` in, then split them into `src/clockwork_tfm/` (model, data, analysis) and the `train.py` / `predict.py` / `analyze.py` scripts.
 - The model here is standalone; tiny-transformer is grown from it afterwards.
 
 ## Quickstart
